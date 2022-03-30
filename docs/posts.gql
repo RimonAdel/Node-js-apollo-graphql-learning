@@ -1,0 +1,26 @@
+# Write your query or mutation here
+query test {
+  getAllPosts{
+    title
+    content
+    featuredImage
+  }
+}
+
+mutation CREATE_NEW_POST($title:String!, $content:String!, $featuredImage:String){
+  createNewPost(newPost:{
+    title: $title
+    content:$content
+    featuredImage:$featuredImage
+  }){
+    title
+    content
+    featuredImage
+  }
+}
+
+{
+  "title": "post 5",
+  "content": "content 5",
+	"featuredImage": "https://i.ytimg.com/vi/camfkdmuR8M/maxresdefault.jpg"
+}
